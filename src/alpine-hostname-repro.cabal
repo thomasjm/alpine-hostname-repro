@@ -4,13 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e5d18b63bb4fa68a5659485e324c1d26f613a84b8823aa11970fea42c855d41e
+-- hash: 1967add33a23e67d0801de3ecf2190c83da0b05251444ef6bb9d556f3b51aeb2
 
-name:           http-client-alpine-repro
+name:           alpine-hostname-repro
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/http-client-alpine-repro#readme>
-homepage:       https://github.com/githubuser/http-client-alpine-repro#readme
-bug-reports:    https://github.com/githubuser/http-client-alpine-repro/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/alpine-hostname-repro#readme>
+homepage:       https://github.com/githubuser/alpine-hostname-repro#readme
+bug-reports:    https://github.com/githubuser/alpine-hostname-repro/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2020 Author name here
@@ -23,13 +23,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/http-client-alpine-repro
+  location: https://github.com/githubuser/alpine-hostname-repro
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_http_client_alpine_repro
+      Paths_alpine_hostname_repro
   hs-source-dirs:
       src
   build-depends:
@@ -38,31 +38,31 @@ library
     , interpolate
   default-language: Haskell2010
 
-executable http-client-alpine-repro-exe
+executable alpine-hostname-repro-exe
   main-is: Main.hs
   other-modules:
-      Paths_http_client_alpine_repro
+      Paths_alpine_hostname_repro
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      alpine-hostname-repro
+    , base >=4.7 && <5
     , http-client
-    , http-client-alpine-repro
     , interpolate
   default-language: Haskell2010
 
-test-suite http-client-alpine-repro-test
+test-suite alpine-hostname-repro-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_http_client_alpine_repro
+      Paths_alpine_hostname_repro
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      alpine-hostname-repro
+    , base >=4.7 && <5
     , http-client
-    , http-client-alpine-repro
     , interpolate
   default-language: Haskell2010
